@@ -11,7 +11,7 @@
 @interface ToDo : RLMObject
 @property NSString * toDoId;
 @property NSString * text;
-@property BOOL * completed;
+@property bool  completed;
 
 @end
 

@@ -24,14 +24,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
 
 #pragma mark - Table view data source
 
@@ -50,16 +48,30 @@
     return [_todos count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"todo_cell" forIndexPath:indexPath];
     
+    
+    ToDo * todo = (ToDo *)[_todos objectAtIndex:indexPath.row];
+    UILabel * name = (UILabel *) [cell viewWithTag:1];
+    NSString * text = todo.text;
+    if(todo.completed == YES){
+        NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:text];
+        [attributeString addAttribute:NSStrikethroughStyleAttributeName
+                                value:@2
+                                range:NSMakeRange(0, [attributeString length])];
+        name.attributedText = attributeString;
+    }
+    else{
+    name.text = todo.text;
+    }
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
