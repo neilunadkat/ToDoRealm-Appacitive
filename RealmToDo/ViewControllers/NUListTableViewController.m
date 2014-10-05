@@ -10,12 +10,11 @@
 #import "List.h"
 #import <Appacitive/AppacitiveSDK.h>
 
-@interface NUListTableViewController ()
+@interface NUListTableViewController ()<UIAlertViewDelegate>
 
 @property NSArray * lists;
 
 - (IBAction)onListAdd:(id)sender;
-
 
 @end
 
@@ -107,5 +106,17 @@
 */
 
 - (IBAction)onListAdd:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Add list"
+                                                    message:@"Enter name of new list"
+                                                   delegate:self
+                                          cancelButtonTitle:@"Done"
+                                          otherButtonTitles:nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
 }
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"%@", [alertView textFieldAtIndex:0].text);
+}
+
 @end

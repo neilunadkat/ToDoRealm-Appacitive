@@ -9,11 +9,12 @@
 #import "NUToDoTableViewController.h"
 #import "ToDo.h"
 
-@interface NUToDoTableViewController ()
+@interface NUToDoTableViewController ()<UIAlertViewDelegate>
 
 @property NSArray * todos;
 
-- (IBAction)onToDoAdd:(id)sender;
+- (IBAction)onTodoAdd:(id)sender;
+
 
 @end
 
@@ -109,6 +110,17 @@
 }
 */
 
-- (IBAction)onToDoAdd:(id)sender {
+- (IBAction)onTodoAdd:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Add todo"
+                                                    message:@"Enter name of new todo"
+                                                   delegate:self
+                                          cancelButtonTitle:@"Done"
+                                          otherButtonTitles:nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [alert show];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"%@", [alertView textFieldAtIndex:0].text);
 }
 @end

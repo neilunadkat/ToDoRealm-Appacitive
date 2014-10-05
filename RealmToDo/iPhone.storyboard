@@ -115,10 +115,10 @@
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onListAdd:" destination="fx9-hT-zn0" eventType="touchUpInside" id="jk7-Fy-HgG"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="onListAdd:" destination="fx9-hT-zn0" id="eCh-6H-EpZ"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -181,10 +181,10 @@
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onTodoAdd:" destination="544-HK-dq7" eventType="touchUpInside" id="5Wx-0b-R7b"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="onToDoAdd:" destination="544-HK-dq7" id="hqH-rc-lMp"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
