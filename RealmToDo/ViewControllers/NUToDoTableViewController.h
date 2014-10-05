@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "List.h"
 
 @interface NUToDoTableViewController : UITableViewController
+
+@property List * list;
 
 @end

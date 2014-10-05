@@ -11,10 +11,10 @@
 
 @interface NUToDoTableViewController ()<UIAlertViewDelegate>
 
-@property NSArray * todos;
+@property RLMArray * todos;
 
 - (IBAction)onTodoAdd:(id)sender;
-
+@property RLMNotificationToken * token;
 
 @end
 
@@ -24,11 +24,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self getTodos];
+    [self addNotificationToRealmUpdates];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void) addNotificationToRealmUpdates{
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    
+    self.token = [realm addNotificationBlock:^(NSString *note, RLMRealm * realm) {
+        [self getTodos];
+    }];
 }
 
 #pragma mark - Table view data source
@@ -72,6 +82,17 @@
     return cell;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    ToDo * td = (ToDo *) [_todos objectAtIndex:indexPath.row];
+    BOOL status;
+    if(td.completed == NO){
+        status = YES;
+    }
+    else{
+        status = NO;
+    }
+    [self updateTodo:td withCompleted:status];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -111,16 +132,10 @@
 }
 */
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void) getTodos{
+    _todos = _list.toDos;
+    [self.tableView reloadData];
 }
-*/
 
 - (IBAction)onTodoAdd:(id)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Add todo"
@@ -133,6 +148,31 @@
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    NSLog(@"%@", [alertView textFieldAtIndex:0].text);
+    NSString * todo = [alertView textFieldAtIndex:0].text;
+    NSLog(@"%@", todo);
+    
+    ToDo * td = [[ToDo alloc] init];
+    td.text = todo;
+    td.completed = NO;
+    td.toDoId = @"";
+    [self addToListNewToDo:td];
+    
+}
+
+- (void) updateTodo:(ToDo *) td withCompleted:(BOOL) status{
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    
+    [realm beginWriteTransaction];
+    td.completed = status;
+    [realm commitWriteTransaction];
+}
+
+- (void) addToListNewToDo:(ToDo *) todo{
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    
+
+    [realm beginWriteTransaction];
+    [_list.toDos addObject:todo];
+    [realm commitWriteTransaction];
 }
 @end

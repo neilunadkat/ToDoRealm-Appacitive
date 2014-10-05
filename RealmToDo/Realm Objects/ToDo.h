@@ -12,6 +12,7 @@
 @property NSString * toDoId;
 @property NSString * text;
 @property bool  completed;
+@property bool isSyncd;
 
 @end
 

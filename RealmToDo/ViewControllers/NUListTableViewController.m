@@ -9,23 +9,27 @@
 #import "NUListTableViewController.h"
 #import "List.h"
 #import <Appacitive/AppacitiveSDK.h>
+#import "NUToDoTableViewController.h"
 
 @interface NUListTableViewController ()<UIAlertViewDelegate>
 
-@property NSArray * lists;
+@property RLMArray * lists;
 
 - (IBAction)onListAdd:(id)sender;
+
+@property RLMNotificationToken * token;
 
 @end
 
 @implementation NUListTableViewController
 
-
+List * selectedList;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self getLists];
+    [self addNotificationToRealmUpdates];
     if([APUser currentUser ] == nil){
         [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"login"] animated:NO completion:nil ]; 
     }
@@ -37,6 +41,14 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
+-(void) addNotificationToRealmUpdates{
+    RLMRealm *realm = [RLMRealm defaultRealm];
+
+    self.token = [realm addNotificationBlock:^(NSString *note, RLMRealm * realm) {
+        [self getLists];
+    }];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -73,7 +85,6 @@
     return cell;
 }
 
-
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -98,7 +109,7 @@
 
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -106,8 +117,17 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    
+    NUToDoTableViewController * todoVC = (NUToDoTableViewController *) [segue destinationViewController];
+    todoVC.list = (List *) [_lists objectAtIndex:path.row];;
 }
-*/
+
+
+- (void) getLists{
+    _lists = [List allObjects];
+    [self.tableView reloadData];
+}
 
 - (IBAction)onListAdd:(id)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Add list"
@@ -120,7 +140,21 @@
 }
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    NSLog(@"%@", [alertView textFieldAtIndex:0].text);
+    NSString * listName =[alertView textFieldAtIndex:0].text;
+    NSLog(@"%@", listName);
+    List *l = [[List alloc] init];
+    l.name =listName;
+    
+    l.listId = @"";
+    [self addListToRealm:l];
+}
+
+-(void) addListToRealm:(List *) list{
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    
+    [realm beginWriteTransaction];
+    [realm addObject:list];
+    [realm commitWriteTransaction];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "NUAppDelegate.h"
 #import <Appacitive/AppacitiveSDK.h>
+#import <Realm/Realm.h>
 
 @implementation NUAppDelegate
 
@@ -18,7 +19,7 @@
     [Appacitive registerAPIKey:@"{Put API Key Here}" useLiveEnvironment:NO];
     [[APLogger sharedLogger] enableLogging:YES];
     [[APLogger sharedLogger] enableVerboseMode:YES];
-    
+    [self realmMigration];
     return YES;
 }
 
@@ -47,6 +48,24 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void) realmMigration{
+    RLMMigrationBlock migrationBlock = ^NSUInteger(RLMMigration *migration,
+                                                   NSUInteger oldSchemaVersion) {
+        // We haven’t migrated anything yet, so oldSchemaVersion == 0
+        if (oldSchemaVersion < 1) {
+            // Nothing to do!
+            // Realm will automatically detect new properties and removed properties
+            // And will update the schema on disk automatically
+        }
+        // Return the latest version number (always set manually)
+        // Must be a higher than the previous version or an RLMException is thrown
+        return 1;
+    };
+    
+    // Apply the migration block above to the default Realm
+    [RLMRealm migrateDefaultRealmWithBlock:migrationBlock];
 }
 
 @end
