@@ -7,6 +7,7 @@
 //
 
 #import "NUAppDelegate.h"
+#import <Appacitive/AppacitiveSDK.h>
 
 @implementation NUAppDelegate
 
@@ -16,6 +17,11 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [Appacitive registerAPIKey:@"{Put your API Key here}" useLiveEnvironment:NO];
+    [[APLogger sharedLogger] enableLogging:YES];
+    [[APLogger sharedLogger] enableVerboseMode:YES];
+    
     return YES;
 }
 
