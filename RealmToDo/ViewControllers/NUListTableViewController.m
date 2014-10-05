@@ -12,7 +12,7 @@
 
 @interface NUListTableViewController ()
 
-@property RLMArray<List> * lists;
+@property NSArray * lists;
 
 - (IBAction)onListAdd:(id)sender;
 

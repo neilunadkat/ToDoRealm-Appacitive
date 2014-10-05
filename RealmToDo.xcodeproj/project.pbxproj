@@ -19,15 +19,16 @@
 		B5C6E45119E115C10069E63D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C6E43919E115C10069E63D /* UIKit.framework */; };
 		B5C6E45919E115C10069E63D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5C6E45719E115C10069E63D /* InfoPlist.strings */; };
 		B5C6E45B19E115C10069E63D /* RealmToDoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C6E45A19E115C10069E63D /* RealmToDoTests.m */; };
-		B5C6E46719E116460069E63D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C6E46619E116460069E63D /* Realm.framework */; };
 		B5C6E46919E116640069E63D /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C6E46819E116640069E63D /* iPhone.storyboard */; };
 		B5C6E46E19E11CF40069E63D /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C6E46D19E11CF40069E63D /* User.m */; };
-		B5C6E47019E11DA20069E63D /* Appacitive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C6E46F19E11DA20069E63D /* Appacitive.framework */; };
 		B5C6E47419E11E380069E63D /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C6E47319E11E380069E63D /* List.m */; };
 		B5C6E47719E11EA20069E63D /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C6E47619E11EA20069E63D /* ToDo.m */; };
 		B5C6E47B19E120850069E63D /* NULoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C6E47A19E120850069E63D /* NULoginViewController.m */; };
 		B5C6E48419E122D30069E63D /* NUListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C6E48319E122D30069E63D /* NUListTableViewController.m */; };
 		B5C6E48719E127880069E63D /* NUToDoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C6E48619E127880069E63D /* NUToDoTableViewController.m */; };
+		B5D816B219E1306F0070F04D /* Appacitive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D816B119E1306F0070F04D /* Appacitive.framework */; };
+		B5D816B419E130810070F04D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D816B319E130810070F04D /* Realm.framework */; };
+		B5D816B619E131390070F04D /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D816B519E131390070F04D /* libc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +58,9 @@
 		B5C6E45619E115C10069E63D /* RealmToDoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RealmToDoTests-Info.plist"; sourceTree = "<group>"; };
 		B5C6E45819E115C10069E63D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B5C6E45A19E115C10069E63D /* RealmToDoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealmToDoTests.m; sourceTree = "<group>"; };
-		B5C6E46619E116460069E63D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		B5C6E46819E116640069E63D /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		B5C6E46C19E11CF40069E63D /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = "Realm Objects/User.h"; sourceTree = "<group>"; };
 		B5C6E46D19E11CF40069E63D /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = "Realm Objects/User.m"; sourceTree = "<group>"; };
-		B5C6E46F19E11DA20069E63D /* Appacitive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Appacitive.framework; sourceTree = "<group>"; };
 		B5C6E47219E11E380069E63D /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = List.h; path = "Realm Objects/List.h"; sourceTree = "<group>"; };
 		B5C6E47319E11E380069E63D /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = List.m; path = "Realm Objects/List.m"; sourceTree = "<group>"; };
 		B5C6E47519E11EA20069E63D /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ToDo.h; path = "Realm Objects/ToDo.h"; sourceTree = "<group>"; };
@@ -72,6 +71,9 @@
 		B5C6E48319E122D30069E63D /* NUListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NUListTableViewController.m; path = ViewControllers/NUListTableViewController.m; sourceTree = "<group>"; };
 		B5C6E48519E127880069E63D /* NUToDoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NUToDoTableViewController.h; path = ViewControllers/NUToDoTableViewController.h; sourceTree = "<group>"; };
 		B5C6E48619E127880069E63D /* NUToDoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NUToDoTableViewController.m; path = ViewControllers/NUToDoTableViewController.m; sourceTree = "<group>"; };
+		B5D816B119E1306F0070F04D /* Appacitive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Appacitive.framework; sourceTree = "<group>"; };
+		B5D816B319E130810070F04D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		B5D816B519E131390070F04D /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,11 +81,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5C6E46719E116460069E63D /* Realm.framework in Frameworks */,
+				B5D816B619E131390070F04D /* libc++.dylib in Frameworks */,
 				B5C6E43819E115C10069E63D /* CoreGraphics.framework in Frameworks */,
 				B5C6E43A19E115C10069E63D /* UIKit.framework in Frameworks */,
+				B5D816B219E1306F0070F04D /* Appacitive.framework in Frameworks */,
 				B5C6E43619E115C10069E63D /* Foundation.framework in Frameworks */,
-				B5C6E47019E11DA20069E63D /* Appacitive.framework in Frameworks */,
+				B5D816B419E130810070F04D /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +125,9 @@
 		B5C6E43419E115C10069E63D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B5C6E46F19E11DA20069E63D /* Appacitive.framework */,
-				B5C6E46619E116460069E63D /* Realm.framework */,
+				B5D816B519E131390070F04D /* libc++.dylib */,
+				B5D816B319E130810070F04D /* Realm.framework */,
+				B5D816B119E1306F0070F04D /* Appacitive.framework */,
 				B5C6E43519E115C10069E63D /* Foundation.framework */,
 				B5C6E43719E115C10069E63D /* CoreGraphics.framework */,
 				B5C6E43919E115C10069E63D /* UIKit.framework */,
@@ -135,6 +139,7 @@
 		B5C6E43B19E115C10069E63D /* RealmToDo */ = {
 			isa = PBXGroup;
 			children = (
+				B5C6E48819E12D570069E63D /* Appacitive */,
 				B5C6E47819E1205A0069E63D /* ViewControllers */,
 				B5C6E46B19E11A210069E63D /* Realm Objects */,
 				B5C6E46819E116640069E63D /* iPhone.storyboard */,
@@ -199,6 +204,13 @@
 				B5C6E48619E127880069E63D /* NUToDoTableViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B5C6E48819E12D570069E63D /* Appacitive */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Appacitive;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,7 +442,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RealmToDo/RealmToDo-Prefix.pch";
 				INFOPLIST_FILE = "RealmToDo/RealmToDo-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -448,7 +462,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RealmToDo/RealmToDo-Prefix.pch";
 				INFOPLIST_FILE = "RealmToDo/RealmToDo-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -512,6 +528,7 @@
 				B5C6E46019E115C10069E63D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5C6E46119E115C10069E63D /* Build configuration list for PBXNativeTarget "RealmToDoTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +537,7 @@
 				B5C6E46319E115C10069E63D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

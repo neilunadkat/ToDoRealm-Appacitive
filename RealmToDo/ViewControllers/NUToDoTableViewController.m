@@ -11,7 +11,7 @@
 
 @interface NUToDoTableViewController ()
 
-@property RLMArray<ToDo> * todos;
+@property NSArray * todos;
 
 - (IBAction)onToDoAdd:(id)sender;
 
