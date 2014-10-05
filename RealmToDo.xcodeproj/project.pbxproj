@@ -19,6 +19,8 @@
 		B5C6E45119E115C10069E63D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C6E43919E115C10069E63D /* UIKit.framework */; };
 		B5C6E45919E115C10069E63D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5C6E45719E115C10069E63D /* InfoPlist.strings */; };
 		B5C6E45B19E115C10069E63D /* RealmToDoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C6E45A19E115C10069E63D /* RealmToDoTests.m */; };
+		B5C6E46719E116460069E63D /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C6E46619E116460069E63D /* Realm.framework */; };
+		B5C6E46919E116640069E63D /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C6E46819E116640069E63D /* iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		B5C6E45619E115C10069E63D /* RealmToDoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RealmToDoTests-Info.plist"; sourceTree = "<group>"; };
 		B5C6E45819E115C10069E63D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B5C6E45A19E115C10069E63D /* RealmToDoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealmToDoTests.m; sourceTree = "<group>"; };
+		B5C6E46619E116460069E63D /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		B5C6E46819E116640069E63D /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C6E46719E116460069E63D /* Realm.framework in Frameworks */,
 				B5C6E43819E115C10069E63D /* CoreGraphics.framework in Frameworks */,
 				B5C6E43A19E115C10069E63D /* UIKit.framework in Frameworks */,
 				B5C6E43619E115C10069E63D /* Foundation.framework in Frameworks */,
@@ -96,6 +101,7 @@
 		B5C6E43419E115C10069E63D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5C6E46619E116460069E63D /* Realm.framework */,
 				B5C6E43519E115C10069E63D /* Foundation.framework */,
 				B5C6E43719E115C10069E63D /* CoreGraphics.framework */,
 				B5C6E43919E115C10069E63D /* UIKit.framework */,
@@ -107,6 +113,7 @@
 		B5C6E43B19E115C10069E63D /* RealmToDo */ = {
 			isa = PBXGroup;
 			children = (
+				B5C6E46819E116640069E63D /* iPhone.storyboard */,
 				B5C6E44419E115C10069E63D /* NUAppDelegate.h */,
 				B5C6E44519E115C10069E63D /* NUAppDelegate.m */,
 				B5C6E44719E115C10069E63D /* Images.xcassets */,
@@ -222,6 +229,7 @@
 			files = (
 				B5C6E44019E115C10069E63D /* InfoPlist.strings in Resources */,
 				B5C6E44819E115C10069E63D /* Images.xcassets in Resources */,
+				B5C6E46919E116640069E63D /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +366,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/neo/Documents/Realm/realm-cocoa-0.86.1/ios",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RealmToDo/RealmToDo-Prefix.pch";
 				INFOPLIST_FILE = "RealmToDo/RealmToDo-Info.plist";
@@ -371,6 +384,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/neo/Documents/Realm/realm-cocoa-0.86.1/ios",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RealmToDo/RealmToDo-Prefix.pch";
 				INFOPLIST_FILE = "RealmToDo/RealmToDo-Info.plist";
