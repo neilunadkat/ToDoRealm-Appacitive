@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5C6E43619E115C10069E63D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C6E43519E115C10069E63D /* Foundation.framework */; };
+		B5C6E43819E115C10069E63D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C6E43719E115C10069E63D /* CoreGraphics.framework */; };
+		B5C6E43A19E115C10069E63D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C6E43919E115C10069E63D /* UIKit.framework */; };
+		B5C6E44019E115C10069E63D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5C6E43E19E115C10069E63D /* InfoPlist.strings */; };
+		B5C6E44219E115C10069E63D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C6E44119E115C10069E63D /* main.m */; };
+		B5C6E44619E115C10069E63D /* NUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C6E44519E115C10069E63D /* NUAppDelegate.m */; };
+		B5C6E44819E115C10069E63D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C6E44719E115C10069E63D /* Images.xcassets */; };
+		B5C6E44F19E115C10069E63D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C6E44E19E115C10069E63D /* XCTest.framework */; };
+		B5C6E45019E115C10069E63D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C6E43519E115C10069E63D /* Foundation.framework */; };
+		B5C6E45119E115C10069E63D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C6E43919E115C10069E63D /* UIKit.framework */; };
+		B5C6E45919E115C10069E63D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B5C6E45719E115C10069E63D /* InfoPlist.strings */; };
+		B5C6E45B19E115C10069E63D /* RealmToDoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C6E45A19E115C10069E63D /* RealmToDoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5C6E45219E115C10069E63D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5C6E42A19E115C10069E63D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5C6E43119E115C10069E63D;
+			remoteInfo = RealmToDo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B5C6E43219E115C10069E63D /* RealmToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5C6E43519E115C10069E63D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B5C6E43719E115C10069E63D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B5C6E43919E115C10069E63D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B5C6E43D19E115C10069E63D /* RealmToDo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RealmToDo-Info.plist"; sourceTree = "<group>"; };
+		B5C6E43F19E115C10069E63D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B5C6E44119E115C10069E63D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5C6E44319E115C10069E63D /* RealmToDo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RealmToDo-Prefix.pch"; sourceTree = "<group>"; };
+		B5C6E44419E115C10069E63D /* NUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NUAppDelegate.h; sourceTree = "<group>"; };
+		B5C6E44519E115C10069E63D /* NUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NUAppDelegate.m; sourceTree = "<group>"; };
+		B5C6E44719E115C10069E63D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B5C6E44D19E115C10069E63D /* RealmToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5C6E44E19E115C10069E63D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B5C6E45619E115C10069E63D /* RealmToDoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RealmToDoTests-Info.plist"; sourceTree = "<group>"; };
+		B5C6E45819E115C10069E63D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B5C6E45A19E115C10069E63D /* RealmToDoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealmToDoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5C6E42F19E115C10069E63D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5C6E43819E115C10069E63D /* CoreGraphics.framework in Frameworks */,
+				B5C6E43A19E115C10069E63D /* UIKit.framework in Frameworks */,
+				B5C6E43619E115C10069E63D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C6E44A19E115C10069E63D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5C6E44F19E115C10069E63D /* XCTest.framework in Frameworks */,
+				B5C6E45119E115C10069E63D /* UIKit.framework in Frameworks */,
+				B5C6E45019E115C10069E63D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5C6E42919E115C10069E63D = {
+			isa = PBXGroup;
+			children = (
+				B5C6E43B19E115C10069E63D /* RealmToDo */,
+				B5C6E45419E115C10069E63D /* RealmToDoTests */,
+				B5C6E43419E115C10069E63D /* Frameworks */,
+				B5C6E43319E115C10069E63D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5C6E43319E115C10069E63D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5C6E43219E115C10069E63D /* RealmToDo.app */,
+				B5C6E44D19E115C10069E63D /* RealmToDoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5C6E43419E115C10069E63D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5C6E43519E115C10069E63D /* Foundation.framework */,
+				B5C6E43719E115C10069E63D /* CoreGraphics.framework */,
+				B5C6E43919E115C10069E63D /* UIKit.framework */,
+				B5C6E44E19E115C10069E63D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5C6E43B19E115C10069E63D /* RealmToDo */ = {
+			isa = PBXGroup;
+			children = (
+				B5C6E44419E115C10069E63D /* NUAppDelegate.h */,
+				B5C6E44519E115C10069E63D /* NUAppDelegate.m */,
+				B5C6E44719E115C10069E63D /* Images.xcassets */,
+				B5C6E43C19E115C10069E63D /* Supporting Files */,
+			);
+			path = RealmToDo;
+			sourceTree = "<group>";
+		};
+		B5C6E43C19E115C10069E63D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5C6E43D19E115C10069E63D /* RealmToDo-Info.plist */,
+				B5C6E43E19E115C10069E63D /* InfoPlist.strings */,
+				B5C6E44119E115C10069E63D /* main.m */,
+				B5C6E44319E115C10069E63D /* RealmToDo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5C6E45419E115C10069E63D /* RealmToDoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5C6E45A19E115C10069E63D /* RealmToDoTests.m */,
+				B5C6E45519E115C10069E63D /* Supporting Files */,
+			);
+			path = RealmToDoTests;
+			sourceTree = "<group>";
+		};
+		B5C6E45519E115C10069E63D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5C6E45619E115C10069E63D /* RealmToDoTests-Info.plist */,
+				B5C6E45719E115C10069E63D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5C6E43119E115C10069E63D /* RealmToDo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5C6E45E19E115C10069E63D /* Build configuration list for PBXNativeTarget "RealmToDo" */;
+			buildPhases = (
+				B5C6E42E19E115C10069E63D /* Sources */,
+				B5C6E42F19E115C10069E63D /* Frameworks */,
+				B5C6E43019E115C10069E63D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RealmToDo;
+			productName = RealmToDo;
+			productReference = B5C6E43219E115C10069E63D /* RealmToDo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5C6E44C19E115C10069E63D /* RealmToDoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5C6E46119E115C10069E63D /* Build configuration list for PBXNativeTarget "RealmToDoTests" */;
+			buildPhases = (
+				B5C6E44919E115C10069E63D /* Sources */,
+				B5C6E44A19E115C10069E63D /* Frameworks */,
+				B5C6E44B19E115C10069E63D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5C6E45319E115C10069E63D /* PBXTargetDependency */,
+			);
+			name = RealmToDoTests;
+			productName = RealmToDoTests;
+			productReference = B5C6E44D19E115C10069E63D /* RealmToDoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5C6E42A19E115C10069E63D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NU;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Appacitive;
+				TargetAttributes = {
+					B5C6E44C19E115C10069E63D = {
+						TestTargetID = B5C6E43119E115C10069E63D;
+					};
+				};
+			};
+			buildConfigurationList = B5C6E42D19E115C10069E63D /* Build configuration list for PBXProject "RealmToDo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B5C6E42919E115C10069E63D;
+			productRefGroup = B5C6E43319E115C10069E63D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5C6E43119E115C10069E63D /* RealmToDo */,
+				B5C6E44C19E115C10069E63D /* RealmToDoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5C6E43019E115C10069E63D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5C6E44019E115C10069E63D /* InfoPlist.strings in Resources */,
+				B5C6E44819E115C10069E63D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C6E44B19E115C10069E63D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5C6E45919E115C10069E63D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5C6E42E19E115C10069E63D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5C6E44219E115C10069E63D /* main.m in Sources */,
+				B5C6E44619E115C10069E63D /* NUAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C6E44919E115C10069E63D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5C6E45B19E115C10069E63D /* RealmToDoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5C6E45319E115C10069E63D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5C6E43119E115C10069E63D /* RealmToDo */;
+			targetProxy = B5C6E45219E115C10069E63D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5C6E43E19E115C10069E63D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5C6E43F19E115C10069E63D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B5C6E45719E115C10069E63D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5C6E45819E115C10069E63D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5C6E45C19E115C10069E63D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B5C6E45D19E115C10069E63D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5C6E45F19E115C10069E63D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RealmToDo/RealmToDo-Prefix.pch";
+				INFOPLIST_FILE = "RealmToDo/RealmToDo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B5C6E46019E115C10069E63D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RealmToDo/RealmToDo-Prefix.pch";
+				INFOPLIST_FILE = "RealmToDo/RealmToDo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B5C6E46219E115C10069E63D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RealmToDo.app/RealmToDo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RealmToDo/RealmToDo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RealmToDoTests/RealmToDoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B5C6E46319E115C10069E63D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RealmToDo.app/RealmToDo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RealmToDo/RealmToDo-Prefix.pch";
+				INFOPLIST_FILE = "RealmToDoTests/RealmToDoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5C6E42D19E115C10069E63D /* Build configuration list for PBXProject "RealmToDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5C6E45C19E115C10069E63D /* Debug */,
+				B5C6E45D19E115C10069E63D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5C6E45E19E115C10069E63D /* Build configuration list for PBXNativeTarget "RealmToDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5C6E45F19E115C10069E63D /* Debug */,
+				B5C6E46019E115C10069E63D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B5C6E46119E115C10069E63D /* Build configuration list for PBXNativeTarget "RealmToDoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5C6E46219E115C10069E63D /* Debug */,
+				B5C6E46319E115C10069E63D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5C6E42A19E115C10069E63D /* Project object */;
+}
