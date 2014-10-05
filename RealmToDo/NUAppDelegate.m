@@ -13,12 +13,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
-    [Appacitive registerAPIKey:@"{Put your API Key here}" useLiveEnvironment:NO];
+
+    //    {Put API Key Here}
+    [Appacitive registerAPIKey:@"{Put API Key Here}" useLiveEnvironment:NO];
     [[APLogger sharedLogger] enableLogging:YES];
     [[APLogger sharedLogger] enableVerboseMode:YES];
     

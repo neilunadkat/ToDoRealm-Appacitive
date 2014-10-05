@@ -53,7 +53,7 @@
                                     <action selector="onLogin:" destination="W8G-Tc-6DX" eventType="touchUpInside" id="OYX-oK-Z1J"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="aBb-9O-Zqp">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="aBb-9O-Zqp">
                                 <rect key="frame" x="150" y="85" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
@@ -129,7 +129,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gCX-Md-G1m">
             <objects>
-                <navigationController definesPresentationContext="YES" id="3ft-X9-bzI" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="root" definesPresentationContext="YES" id="3ft-X9-bzI" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NPL-kn-bml">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
