@@ -16,7 +16,11 @@
 @property RLMArray<User> * sharedUsers;
 @property User * owner;
 @property RLMArray<ToDo> * toDos;
-@property bool isSyncd;
+
+// 0 means that there is not update
+// 1 means that the object has been updated
+// 2 means that it is deleted
+@property NSInteger isSyncd;
 @end
 
 // This protocol enables typed collections. i.e.:

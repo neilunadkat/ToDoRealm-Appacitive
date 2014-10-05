@@ -9,6 +9,7 @@
 #import "NULoginViewController.h"
 #import <Appacitive/AppacitiveSDK.h>
 #import "User.h"
+#import "NUSyncEngine.h"
 
 @interface NULoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userName;
@@ -36,7 +37,9 @@
     [APUser authenticateUserWithUsername:_userName.text password:_password.text sessionExpiresAfter:nil limitAPICallsTo:nil successHandler:^(APUser *user) {
         [_activityIndicator stopAnimating];
 //        [_activityIndicator setHidden:YES];
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:^{
+            [[NUSyncEngine sharedNUSyncEngine] startSync];
+        }];
         
     } failureHandler:^(APError *error) {
         [_activityIndicator setHidden:YES];

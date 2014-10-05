@@ -12,7 +12,11 @@
 @property NSString * toDoId;
 @property NSString * text;
 @property bool  completed;
-@property bool isSyncd;
+
+// 0 means that there is not update
+// 1 means that the object has been updated
+// 2 means that it is deleted
+@property NSInteger isSyncd;
 
 @end
 

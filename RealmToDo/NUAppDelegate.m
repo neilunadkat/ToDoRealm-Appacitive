@@ -20,6 +20,9 @@
     [[APLogger sharedLogger] enableLogging:YES];
     [[APLogger sharedLogger] enableVerboseMode:YES];
     [self realmMigration];
+    
+    // The root view controller is NUListTableViewController
+    // Then comes the NUToDoTableViewController
     return YES;
 }
 
@@ -50,6 +53,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+//For Realm Migration
 - (void) realmMigration{
     RLMMigrationBlock migrationBlock = ^NSUInteger(RLMMigration *migration,
                                                    NSUInteger oldSchemaVersion) {

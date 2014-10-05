@@ -12,10 +12,10 @@
 
 // Specify default values for properties
 
-//+ (NSDictionary *)defaultPropertyValues
-//{
-//    return @{};
-//}
++ (NSDictionary *)defaultPropertyValues
+{
+    return @{@"toDoId":@"",@"text":@""};
+}
 
 // Specify properties to ignore (Realm won't persist these)
 

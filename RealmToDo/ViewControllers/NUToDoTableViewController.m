@@ -8,12 +8,15 @@
 
 #import "NUToDoTableViewController.h"
 #import "ToDo.h"
+#import "NUSyncEngine.h"
 
 @interface NUToDoTableViewController ()<UIAlertViewDelegate>
 
 @property RLMArray * todos;
 
+// Action on the add button pressed on the top right
 - (IBAction)onTodoAdd:(id)sender;
+
 @property RLMNotificationToken * token;
 
 @end
@@ -26,17 +29,13 @@
     [super viewDidLoad];
     [self getTodos];
     [self addNotificationToRealmUpdates];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 -(void) addNotificationToRealmUpdates{
     RLMRealm *realm = [RLMRealm defaultRealm];
     
     self.token = [realm addNotificationBlock:^(NSString *note, RLMRealm * realm) {
+        //Whenever there are changes in Realm call this.
         [self getTodos];
     }];
 }
@@ -92,6 +91,7 @@
         status = NO;
     }
     [self updateTodo:td withCompleted:status];
+    [[NUSyncEngine sharedNUSyncEngine] updatedTodo:td];
 }
 
 /*
@@ -116,21 +116,6 @@
 }
 */
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 -(void) getTodos{
     _todos = _list.toDos;
@@ -154,8 +139,10 @@
     ToDo * td = [[ToDo alloc] init];
     td.text = todo;
     td.completed = NO;
-    td.toDoId = @"";
+    td.isSyncd = 1;
     [self addToListNewToDo:td];
+    
+    [[NUSyncEngine sharedNUSyncEngine] addedTodo:td ToList:_list];
     
 }
 

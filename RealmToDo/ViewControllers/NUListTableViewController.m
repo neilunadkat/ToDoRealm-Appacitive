@@ -10,11 +10,14 @@
 #import "List.h"
 #import <Appacitive/AppacitiveSDK.h>
 #import "NUToDoTableViewController.h"
+#import "NUSyncEngine.h"
 
 @interface NUListTableViewController ()<UIAlertViewDelegate>
 
 @property RLMArray * lists;
 
+
+// Action on the add button pressed on the top right
 - (IBAction)onListAdd:(id)sender;
 
 @property RLMNotificationToken * token;
@@ -30,15 +33,17 @@ List * selectedList;
     [super viewDidLoad];
     [self getLists];
     [self addNotificationToRealmUpdates];
+    
+    //If user not logged in then open the login view
     if([APUser currentUser ] == nil){
         [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"login"] animated:NO completion:nil ]; 
     }
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    //Else start the sync
+    else{
+
+        [[NUSyncEngine sharedNUSyncEngine] startSync];
+    }
 }
 
 
@@ -144,9 +149,10 @@ List * selectedList;
     NSLog(@"%@", listName);
     List *l = [[List alloc] init];
     l.name =listName;
-    
-    l.listId = @"";
+    l.isSyncd = 1;
     [self addListToRealm:l];
+    
+    [[NUSyncEngine sharedNUSyncEngine] addedList:l];
 }
 
 -(void) addListToRealm:(List *) list{

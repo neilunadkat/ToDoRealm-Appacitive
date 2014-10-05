@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "List.h"
 
 @interface NUSyncEngine : NSObject
 
@@ -14,6 +15,13 @@
 
 - (void) startSync;
 
-- (void) initialiseSyncEngine;
+// Have added these separate calls because Realm notification currently does not support
+// the ability to know what changed
+
+- (void) addedList:(List *)list;
+
+-(void) addedTodo:(ToDo *) todo ToList:(List *) list;
+
+- (void) updatedTodo:(ToDo *)todo;
 
 @end
