@@ -35,7 +35,6 @@
     
     [APUser authenticateUserWithUsername:_userName.text password:_password.text sessionExpiresAfter:nil limitAPICallsTo:nil successHandler:^(APUser *user) {
         [_activityIndicator stopAnimating];
-//        [_activityIndicator setHidden:YES];
         [self dismissViewControllerAnimated:YES completion:nil];
         
     } failureHandler:^(APError *error) {
