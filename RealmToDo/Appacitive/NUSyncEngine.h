@@ -12,8 +12,4 @@
 
 + (instancetype) sharedNUSyncEngine;
 
-- (void) startSync;
-
-- (void) initialiseSyncEngine;
-
 @end

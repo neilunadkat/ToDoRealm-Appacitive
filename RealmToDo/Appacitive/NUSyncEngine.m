@@ -24,15 +24,4 @@ bool initalised = NO;
     return sharedInstance;
 }
 
--(void ) startSync{
-    
-}
-
-
-//This is to setup notification changes for Realm
-- (void) initialiseSyncEngine{
-    if(initalised == YES)
-        return;
-    
-}
 @end
