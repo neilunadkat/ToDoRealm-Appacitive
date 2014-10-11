@@ -7,7 +7,6 @@
 //
 
 #import <Realm/Realm.h>
-#import "User.h"
 #import "ToDo.h"
 
 @interface List : RLMObject
