@@ -11,12 +11,8 @@
 #import "ToDo.h"
 
 @interface List : RLMObject
-@property NSString * listId;
 @property NSString * name;
-@property RLMArray<User> * sharedUsers;
-@property User * owner;
 @property RLMArray<ToDo> * toDos;
-@property bool isSyncd;
 @end
 
 // This protocol enables typed collections. i.e.:

@@ -9,10 +9,8 @@
 #import <Realm/Realm.h>
 
 @interface ToDo : RLMObject
-@property NSString * toDoId;
 @property NSString * text;
 @property bool  completed;
-@property bool isSyncd;
 
 @end
 

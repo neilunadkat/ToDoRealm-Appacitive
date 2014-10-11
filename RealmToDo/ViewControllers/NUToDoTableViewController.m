@@ -111,7 +111,6 @@
     ToDo * td = [[ToDo alloc] init];
     td.text = todo;
     td.completed = NO;
-    td.toDoId = @"";
     [self addToListNewToDo:td];
     
 }

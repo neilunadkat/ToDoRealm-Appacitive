@@ -109,8 +109,6 @@ List * selectedList;
     NSLog(@"%@", listName);
     List *l = [[List alloc] init];
     l.name =listName;
-    
-    l.listId = @"";
     [self addListToRealm:l];
 }
 
