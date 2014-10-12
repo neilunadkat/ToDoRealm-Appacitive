@@ -12,8 +12,6 @@
 
 @implementation NUSyncEngine
 
-bool initalised = NO;
-
 +(instancetype) sharedNUSyncEngine{
     static dispatch_once_t once;
     static NUSyncEngine *sharedInstance;
