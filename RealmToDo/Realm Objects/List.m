@@ -14,7 +14,7 @@
 
 + (NSDictionary *)defaultPropertyValues
 {
-    return @{@"listId":@""};
+    return @{@"listId":@"",@"name":@""};
 }
 
 // Specify properties to ignore (Realm won't persist these)
