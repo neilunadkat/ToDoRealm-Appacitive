@@ -13,8 +13,6 @@
 
 + (instancetype) sharedNUSyncEngine;
 
-- (void) startSync;
-
 // Have added these separate calls because Realm notification currently does not support
 // the ability to know what changed
 

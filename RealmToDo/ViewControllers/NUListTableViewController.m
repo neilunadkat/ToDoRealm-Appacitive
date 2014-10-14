@@ -31,19 +31,13 @@ List * selectedList;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self getLists];
-    [self addNotificationToRealmUpdates];
-    
     //If user not logged in then open the login view
     if([APUser currentUser ] == nil){
         [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"login"] animated:NO completion:nil ]; 
     }
+    [self getLists];
+    [self addNotificationToRealmUpdates];
 
-    //Else start the sync
-    else{
-
-        [[NUSyncEngine sharedNUSyncEngine] startSync];
-    }
 }
 
 
